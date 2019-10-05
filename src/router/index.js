@@ -37,6 +37,7 @@ export const constantRouterMap = [
     }]
   },
 
+  // 菜单
   {
     path: '/example',
     component: Layout,
@@ -73,6 +74,39 @@ export const constantRouterMap = [
       }
     ]
   },
+
+  {
+    path: '/label',
+    component: Layout,
+    name: 'label',
+    meta: { title: '标签管理', icon: 'example' },
+    children: [
+      {
+        path: 'label',
+        name: 'label',
+        component: () => import('@/views/table/label'),
+        meta: { title: '标签管理', icon: 'form' }
+      }
+    ]
+  },
+
+  {
+    path: '/labelPage',
+    component: Layout,
+    name: 'labelPage',
+    meta: { title: '标签管理分页', icon: 'example' },
+    children: [
+      {
+        path: 'labelPage',
+        name: 'labelPage',
+        component: () => import('@/views/table/labelpage'),
+        meta: { title: '标签管理分页', icon: 'form' }
+      }
+    ]
+  },
+
+  
+  
   {
     path: '/recruit',
     component: Layout,
